@@ -1,0 +1,33 @@
+<!--
+
+<div>{{'data.language' | translate}}</div>
+<select (change)="selectLanguage($event)">
+  <option value="en">{{'data.english' | translate}} </option>
+  <option value="fr">{{'data.frensh' | translate}}</option>
+
+</select>
+
+<h2>{{'data.details' | translate }}</h2>
+-->
+
+
+
+<div>{{'data.language' | translate}}</div>
+
+<div class="drop-down">
+
+  <div class="wrapper" (click)="up()">
+    <img [src]="box1.img" class="selectedImg">
+    <div class="selected">{{ box1.lang }}</div>
+    <i class="ri-arrow-drop-down-fill arrow"></i>
+  </div>
+
+
+  <div class="list" [ngClass]="{'show':!test}">
+    <div class="item" (click)="change(box2)">
+      <img [src]="box2.img" alt="">
+      <div class="text">{{ box2.lang }}</div>
+    </div>
+
+  </div>
+</div>
